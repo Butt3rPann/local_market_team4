@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-    @apply bg-primary-200;
+    @apply bg-[#FFF3E5];
 }
 
 .flex-center {
