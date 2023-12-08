@@ -5,6 +5,11 @@ export default {
     extend: {
       fontFamily: {
         mono: ["IBM Plex Mono", "monospace"],
+        concertOne: ["Concert One"],
+        lilitaOne: ["'Lilita One', sans-serif"],
+        anuphan: ["Anuphan"],
+        pridi: ["Pridi"],
+        poppins: ["Poppins"],
       },
       colors: {
         primary: {

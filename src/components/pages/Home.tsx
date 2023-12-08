@@ -1,16 +1,16 @@
 import Banner from '../Home/Banner'
-import NavBar from '../layouts/NavBar'
-import ProductList from '../Home/ProductList'
-import More from '../button/more'
+import Bestseller from '../Home/BestSeller'
+import Layout from '../layouts/Layout'
+
 const Home = () => {
 
   return (
     <>
-      <NavBar/>
+      <Layout/>
       <Banner/>
-      <ProductList/>
-      <More/>
+      <Bestseller/>
     </>
+
   )
 }
 
