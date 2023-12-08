@@ -33,9 +33,9 @@ const ImageDisplay: FC<{ data: string | string[] }> = ({ data }) => {
   };
 
   return (
-    <div className="flex flex-col justify-between items-center w-[400px] h-[375px]">
+    <div className="flex flex-col justify-between items-center w-[400px] h-[375px] drop-shadow-lg">
       {/* MainImg */}
-      <img src={mainImg} style={mainStyle} />
+      <img src={mainImg} style={mainStyle} className="bg-white" />
       {isMultipleImage && Array.isArray(data) && (
         <div className="flex flex-row justify-between items-center w-full">
           <img
@@ -45,7 +45,7 @@ const ImageDisplay: FC<{ data: string | string[] }> = ({ data }) => {
           />
           {data.slice(imgPtr, imgPtr + 3).map((img: string, index: number) => (
             <div key={index} onClick={() => handleImgSelect(imgPtr + index)}>
-              <img src={img} style={miniStyle} />
+              <img src={img} style={miniStyle} className="bg-white" />
             </div>
           ))}
           <img

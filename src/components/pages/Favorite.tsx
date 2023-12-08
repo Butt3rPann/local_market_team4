@@ -17,7 +17,7 @@ const Favorite = () => {
       <h1 className="tracking-[.3em] font-extrabold text-[70px] mt-10 text-[#F56362] text-center drop-shadow-lg">
         FAVORITE
       </h1>
-      <div className='my-3 mx-10 grid grid-cols-4'>
+      <div className='my-3 mx-10 grid grid-cols-5'>
         {favorite.map((product) => {
           return (
             <>

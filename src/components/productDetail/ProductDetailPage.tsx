@@ -9,11 +9,10 @@ import {
   defaultShop,
   ShopData as shopRes,
 } from "../lib/shopData";
+import { useParams } from "react-router-dom";
 
 const ProductDetailPage: FC = () => {
-  // const id = useParams<{id: string}>();
-  const mockId = 1;
-  const id = mockId;
+  let { id } = useParams();
   const [data, setData] = useState<IData>(defaultData);
   const [shopData, setShopData] = useState<IShop>(defaultShop);
   const [shopProduct, setShopProductCnt] = useState<number>(0);
@@ -51,13 +50,13 @@ const ProductDetailPage: FC = () => {
   };
 
   useEffect(() => {
-    fetchData(id);
+    fetchData(+id);
   }, [id]);
 
   return (
     <div className="w-screen flex justify-center items-center">
       <div className="w-9/12">
-        <div className="bg-[#DCA86A] flex flex-col justify-center items-center p-10 rounded-[20px]">
+        <div className="bg-[#F5636266] flex flex-col justify-center items-center p-10 rounded-[20px]">
           <div className="flex flex-row">
             <ImageDisplay data={data.img} />
             <InfoDisplay

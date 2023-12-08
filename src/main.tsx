@@ -6,17 +6,7 @@ import AppContextProvider from './components/context/appContext.tsx'
 import Home from './components/pages/Home.tsx'
 import React from 'react'
 
-// const router = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <Home />,
-//   },
-// ])
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  // <AppContextProvider>
-  //     <RouterProvider router={router} />,
-  // </AppContextProvider>
 
   <React.StrictMode>
     <BrowserRouter>
@@ -28,4 +18,3 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
   </React.StrictMode>,
 )
-

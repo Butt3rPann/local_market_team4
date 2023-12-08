@@ -39,8 +39,8 @@ const ProductList = () => {
         </div>
 
         <div className="flex items-center justify-center my-8">
-            <div className='mx-10 grid grid-auto-fit-lg '>
-            {items.slice(0, 16).map((product) => {
+            <div className='mx-10 grid grid-cols-5'>
+            {items.slice(0, 20).map((product) => {
                 return (
                     <ProductCard {...product} />
                 )})}

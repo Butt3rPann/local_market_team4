@@ -29,41 +29,41 @@ const ProductFooter: FC<{
     );
   };
   return (
-    <div className="bg-[#FFF3E5] w-[950px] h-[120px] mt-20 p-5 flex flex-row justify-between items-center">
+    <div className="bg-[#FFF3E5] w-[950px] h-[120px] mt-20 p-5 flex flex-row justify-between items-center border-[#774F39] border-[1.5px] rounded-xl">
       <div className="flex flex-col">
         <div className="flex flex-row items-center">
           {renderPFP()}
-          <div className="text-amber-600 text-xs font-normal font-['Inter'] ml-5">
+          <div className="text-amber-600 text-[18px] font-normal font-anuphan ml-5">
             {shopDatas.shopData.name}
           </div>
-          <div className="w-[181.48px] h-[15.93px] text-rose-500 text-xs font-normal font-['Inter'] ml-10">
+          <div className="w-[230px] h-[15.93px] text-rose-500 text-[15px] font-normal font-anuphan ml-10">
             เข้าระบบล่าสุดเมื่อ {shopDatas.shopData.lastOnline} นาทีที่ผ่านมา
           </div>
         </div>
         <div className="flex flex-row mt-3">
           <div>
-            <span className="text-amber-600 text-xs font-normal font-['Inter']">
+            <span className="text-amber-600 text-[15px] font-normal font-anuphan">
               {shopDatas.shopProduct}
             </span>
-            <span className="text-black text-opacity-80 text-xs font-normal font-['Inter']">
+            <span className="text-black text-opacity-80 text-[15px] font-normal font-anuphan">
               {" "}
               รายการสินค้า
             </span>
           </div>
           <div className="ml-10">
-            <span className="text-amber-600 text-xs font-normal font-['Inter']">
+            <span className="text-amber-600 text-[15px] font-normal font-anuphan">
               {data.rate}
             </span>
-            <span className="text-black text-opacity-80 text-xs font-normal font-['Inter']">
+            <span className="text-black text-opacity-80 text-[15px] font-normal font-anuphan">
               {" "}
               ให้คะแนน
             </span>
           </div>
           <div className="ml-10">
-            <span className="text-amber-600 text-xs font-normal font-['Inter']">
-              {String((data.numRate / data.saleAmount) * 100).substring(0, 5)}%
+            <span className="text-amber-600 text-[15px] font-normal font-anuphan">
+              {String((data.numRate / data.saleAmount) * 10).substring(0, 5)}
             </span>
-            <span className="text-black text-opacity-80 text-xs font-normal font-['Inter']">
+            <span className="text-black text-opacity-80 text-xs font-normal font-anuphan">
               {" "}
               ให้คะแนน
             </span>
@@ -73,9 +73,9 @@ const ProductFooter: FC<{
       <div className="flex flex-row justify-center items-center">
         <div
           onClick={() => handleVisitShop()}
-          className="w-[172.62px] h-[53.12px] bg-red-400 flex flex-row justify-center items-center"
+          className="w-[172.62px] h-[53.12px] bg-red-400 flex flex-row justify-center items-center border-white border-[3px] drop-shadow-lg"
         >
-          <div className="w-[55.77px] h-[21.25px] text-orange-50 text-base font-normal font-['Inter']">
+          <div className="w-[55.77px] h-[21.25px] text-orange-50 text-base font-normal font-anuphan">
             ดูร้านค้า
           </div>
           <BsShop color={"white"} />

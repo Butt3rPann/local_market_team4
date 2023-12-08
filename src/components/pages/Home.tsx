@@ -1,14 +1,14 @@
 import Banner from '../Home/Banner'
 import Bestseller from '../Home/BestSeller'
-import Layout from '../layouts/Layout'
+import FlashSale from '../Home/FlashSale'
 
 const Home = () => {
 
   return (
     <>
-      <Layout/>
       <Banner/>
       <Bestseller/>
+      <FlashSale/>
     </>
 
   )
