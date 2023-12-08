@@ -1,46 +1,44 @@
+import React, { createContext, useContext, useState } from 'react';
+import { ProductCardProps } from '../layouts/ProductCard';
 
-import { createContext, useContext, useState } from 'react'
+interface AppContextProps {
+    favorite: ProductCardProps[];
+    addToFavorite: (product: ProductCardProps) => void;
+    removeFromFavorite: (id: string) => void;
+}
 
-const AppContext = createContext(null)
+const AppContext = createContext<AppContextProps | undefined>(undefined);
 
 export const useAddContext = () => {
-    
-    const context = useContext(AppContext)
+    const context = useContext(AppContext);
 
     if (context === undefined) {
-        throw new Error('AppContext must be within appContextProvider!')
-    }
-    return context
-}
-
-const AppContextProvider = ({children}) => {
-    
-    const [favorite, setFavorite] = useState([])
-    
-
-    const addToFavorite = (product) => {
-        const oldFav = [...favorite]
-        const newFav = oldFav.concat(product)
-
-        setFavorite(newFav)
+        throw new Error('AppContext must be within AppContextProvider!');
     }
 
-    const removeFromFavorite = (id) => {
-        const oldFav = [...favorite]
-        const newFav = oldFav.filter((product) => product.id !== id);
+    return context;
+};
 
-        setFavorite(newFav)
-    }
+const AppContextProvider: React.FC<any> = ({ children }) => {
+    const [favorite, setFavorite] = useState<ProductCardProps[]>([]);
+
+    const addToFavorite = (product: ProductCardProps) => {
+        const oldFav = [...favorite];
+        const newFav = oldFav.concat(product);
+        setFavorite(newFav);
+    };
+
+    const removeFromFavorite = (id: string) => {
+        const oldFav = [...favorite];
+        const newFav = oldFav.filter((product) => product.id !== +id);
+        setFavorite(newFav);
+    };
 
     return (
-        <AppContext.Provider value = {{favorite, addToFavorite, removeFromFavorite}}>
+        <AppContext.Provider value={{ favorite, addToFavorite, removeFromFavorite }}>
             {children}
         </AppContext.Provider>
-    )
+    );
+};
 
-
-}
-
-export default AppContextProvider
-
-
+export default AppContextProvider;

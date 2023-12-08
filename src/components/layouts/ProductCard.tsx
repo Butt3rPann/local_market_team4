@@ -1,9 +1,9 @@
 import { IoHeartSharp } from "react-icons/io5";
 import { MdOutlineStar } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { useAddContext } from "../context/appContext";
+import { useAddContext } from "../context/appContext.jsx";
 
-type ProductCardProps = {
+export interface ProductCardProps {
   id: number;
   img: string[];
   saleAmount: number;
@@ -21,7 +21,7 @@ const ProductCard = (props: ProductCardProps) => {
   const { favorite, addToFavorite, removeFromFavorite } = useAddContext();
 
   const favChecker = (id: number) => {
-    const boolean = favorite.some((product) => product.id === id);
+    const boolean = favorite.some((product : any) => product.id === id);
     return boolean;
   };
 
@@ -83,7 +83,7 @@ const ProductCard = (props: ProductCardProps) => {
       </Link>
       <div className="absolute top-[195px] right-8 hover:scale-105 ease-in-out duration-300">
         {favChecker(props.id) ? (
-          <button onClick={() => removeFromFavorite(props.id)}>
+          <button onClick={() => removeFromFavorite(props.id+"")}>
             <IoHeartSharp size={25} className="fill-red-600" />
           </button>
         ) : (

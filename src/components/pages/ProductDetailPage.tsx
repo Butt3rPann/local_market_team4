@@ -12,7 +12,7 @@ import {
 import { useParams } from "react-router-dom";
 
 const ProductDetailPage: FC = () => {
-  let { id } = useParams();
+  let { id } : any = useParams();
   const [data, setData] = useState<IData>(defaultData);
   const [shopData, setShopData] = useState<IShop>(defaultShop);
   const [shopProduct, setShopProductCnt] = useState<number>(0);

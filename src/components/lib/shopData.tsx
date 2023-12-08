@@ -1,7 +1,7 @@
 export interface IShop {
     id: number;
     name: string;
-    lastOnline: number; // In minutes
+    lastOnline: number;
     shopProfileImg?: string;
   }
   

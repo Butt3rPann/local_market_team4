@@ -1,8 +1,5 @@
 import { data } from "../lib/data";
-import { IoHeartSharp } from "react-icons/io5";
-import { MdOutlineStar } from "react-icons/md";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { ProductCategories } from "../lib/ProductCategories";
 import ProductCard from "../layouts/ProductCard";
 

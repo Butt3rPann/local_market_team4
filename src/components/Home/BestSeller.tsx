@@ -1,7 +1,4 @@
 import { data } from "../lib/data";
-import { MdOutlineStar } from "react-icons/md";
-import { IoHeartSharp } from "react-icons/io5";
-import { Link } from "react-router-dom";
 import ProductCard from "../layouts/ProductCard";
 
 function Bestseller() {

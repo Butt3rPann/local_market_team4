@@ -1,10 +1,9 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './styles/index.css'
-import { BrowserRouter, RouterProvider, createBrowserRouter} from 'react-router-dom'
-import AppContextProvider from './components/context/appContext.tsx'
-import Home from './components/pages/Home.tsx'
+import { BrowserRouter } from 'react-router-dom'
 import React from 'react'
+import AppContextProvider from './components/context/appContext.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 
@@ -14,7 +13,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <App />
       </AppContextProvider>
     </BrowserRouter>
-
-
   </React.StrictMode>,
 )

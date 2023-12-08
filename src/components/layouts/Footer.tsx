@@ -3,6 +3,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import FooterButton from "../button/FooterButton";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -21,10 +22,22 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-col">
+          <div className="flex gap-4">
+          <Link to="/member">
+            <p className="flex flex-wrap justify-center text-[1.2vw] text-white m-0 mt-6 w-[screen] gap-4">
+              <button className="drop-shadow-md w-[9vw] py-2 bg-[#F56362] rounded-2xl  border-[2.5px] border-solid border-white hover:bg-[#F56362B2] font-lilitaOne tracking-[1.5px]">
+              ABOUT US
+            </button>
+            </p>
+          
+            
+          </Link>
           <p className="flex flex-wrap justify-center text-[1.2vw] text-white m-0 mt-6 w-[screen] gap-4">
             <FooterButton />
           </p>
-          <p className="mt-4 font-anuphan"> copyright Â© 2023 Teamsi-migieow</p>
+          </div>
+          
+          <p className="mt-4 font-anuphan"> copyright © 2023 Teamsi-migieow</p>
           <h2 className="font-bold text-[18px] mt-3">Credit</h2>
           <p className="font-anuphan">Shopee</p>
           <p className="font-anuphan">KMUTT Book Store</p>
