@@ -354,7 +354,7 @@ export const data = [
         rate: 4.9,
         numRate: 2000,
         price: 145,
-        categories: "Others",
+        categories: "Book",
         detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis mauris est, in dictum velit porttitor at. Donec sit amet orci ligula. Quisque venenatis, velit vel porttitor consequat, justo dolor placerat quam, sodales lacinia odio leo sit amet dui. Ut orci tortor, fringilla mollis interdum quis, dapibus a libero. "
       },
       {
