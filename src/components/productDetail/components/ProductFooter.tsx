@@ -61,7 +61,7 @@ const ProductFooter: FC<{
           </div>
           <div className="ml-10">
             <span className="text-amber-600 text-[15px] font-normal font-anuphan">
-              {String((data.numRate / data.saleAmount) * 10).substring(0, 5)}
+              {String((data.numRate / data.saleAmount) * 100).substring(0, 5)}%
             </span>
             <span className="text-black text-opacity-80 text-xs font-normal font-anuphan">
               {" "}

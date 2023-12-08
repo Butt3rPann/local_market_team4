@@ -5,7 +5,7 @@ import Products from "./components/pages/Products";
 import Layout from "./components/layouts/Layout";
 import Favorite from "./components/pages/Favorite";
 import Detail from "./components/pages/Detail";
-import ProductDetailPage from "./components/productDetail/ProductDetailPage";
+import ProductDetailPage from "./components/pages/ProductDetailPage";
 
 
 
@@ -17,6 +17,7 @@ export default function App() {
           <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/product" element={<Products />} />
           <Route path="/favorite" element={<Favorite />} />
+          <Route path="/cart" element={<Favorite />} />
        </Route>
       </Routes>
   );

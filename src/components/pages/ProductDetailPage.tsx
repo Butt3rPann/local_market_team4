@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from "react";
 import { data as response } from "../lib/data";
-import ImageDisplay from "./components/ImageDisplay";
-import { IData, defaultData } from "./interfaces/IData";
-import InfoDisplay from "./components/InfoDisplay";
-import ProductFooter from "./components/ProductFooter";
+import ImageDisplay from "../productDetail/components/ImageDisplay";
+import { IData, defaultData } from "../productDetail/interfaces/IData";
+import InfoDisplay from "../productDetail/components/InfoDisplay";
+import ProductFooter from "../productDetail/components/ProductFooter";
 import {
   IShop,
   defaultShop,
@@ -55,7 +55,7 @@ const ProductDetailPage: FC = () => {
 
   return (
     <div className="w-screen flex justify-center items-center">
-      <div className="w-9/12">
+      <div className="w-9/12 mt-14">
         <div className="bg-[#F5636266] flex flex-col justify-center items-center p-10 rounded-[20px]">
           <div className="flex flex-row">
             <ImageDisplay data={data.img} />

@@ -57,7 +57,7 @@ const InfoDisplay: FC<{
           <div className="w-[149.23px] h-[50.65px] left-0 top-0 absolute bg-orange-50 rounded-[13.57px]" />
           <div className="w-[50.65px] h-[0px] left-[38.89px] top-0 absolute origin-top-left rotate-90 border border-[#DE7B00]"></div>
           <div className="w-[50.65px] h-[0px] left-[108.98px] top-0 absolute origin-top-left rotate-90 border border-[#DE7B00]"></div>
-          <div
+          <button
             className="left-[14.47px] top-[12.21px] absolute text-[#DE7B00] text-base font-normal font-anuphan"
             onClick={() => {
               setAmount((prevAmount) =>
@@ -66,8 +66,8 @@ const InfoDisplay: FC<{
             }}
           >
             -
-          </div>
-          <div
+          </button>
+          <button
             className="left-[125.72px] top-[12.21px] absolute text-[#DE7B00] text-base font-normal font-anuphan"
             onClick={() => {
               setAmount((prevAmount) =>
@@ -76,29 +76,29 @@ const InfoDisplay: FC<{
             }}
           >
             +
-          </div>
+          </button>
           <div className="left-[70.09px] top-[15.38px] absolute text-[#DE7B00] text-base font-normal font-anuphan">
             {amount}
           </div>
         </div>
       </div>
       <div className="mt-7 flex flex-row">
-        <div
+        <button
           onClick={() => handleBuy()}
           className="w-[126.52px] h-[40.55px] bg-red-400 rounded-lg flex justify-center items-center"
         >
           <div className="text-orange-50 text-base font-normal font-anuphan">
             ซื้อเลย
           </div>
-        </div>
-        <div
+        </button>
+        <button
           onClick={() => handleAddCart()}
           className="ml-8 w-[126.52px] h-[40.55px] bg-red-400 rounded-lg flex justify-center items-center"
         >
           <div className="text-orange-50 text-base font-normal font-anuphan">
             เพิ่มลงตะกร้า
           </div>
-        </div>
+        </button>
       </div>
     </div>
   );
